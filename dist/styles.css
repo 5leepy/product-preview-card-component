@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --primary-400: hsl(158, 36%, 37%);
+  --primary-500: hsl(158, 36%, 20%);
+  --primary-200: hsl(30, 38%, 92%);
+  --neutral-900: hsl(212, 21%, 14%);
+  --neutral-400: hsl(228, 12%, 48%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--neutral-400);
+  background-color: var(--primary-200);
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-400);
+  color: var(--neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
+}
+.button:is(:hover, :focus) {
+  background-color: var(--primary-500);
+}
+
+.button[data-icon=shopping-cart]::before {
+  content: "";
+  background-image: url(/images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+}
+
+.product {
+  --content-padding: 1.5rem;
+  display: grid;
+  background-color: var(--neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+@media (min-width: 600px) {
+  .product {
+    --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.product__content {
+  display: grid;
+  gap: 1rem;
+  padding: var(--content-padding);
+}
+.product__category {
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.product__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--neutral-900);
+}
+.product__text {
+  line-height: 1.5;
+}
+.product__price {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--primary-400);
+}/*# sourceMappingURL=styles.css.map */
